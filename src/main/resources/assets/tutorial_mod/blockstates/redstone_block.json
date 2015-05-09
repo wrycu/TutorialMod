@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "normal": {
+            "model": "tutorial_mod:redstone_block"
+        }
+    }
+}

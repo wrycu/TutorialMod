@@ -1,0 +1,10 @@
+/* Done client-side */
+package com.wrycu.tutorial.proxy;
+
+public class ClientProxy extends CommonProxy{
+	@Override
+	public void registerRenders()
+	{
+		
+	}
+}

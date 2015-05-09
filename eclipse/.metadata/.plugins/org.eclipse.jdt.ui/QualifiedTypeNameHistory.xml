@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="net.minecraftforge.fml.common.event.FMLPreInitializationEvent"/>
+<fullyQualifiedTypeName name="net.minecraft.client.Minecraft"/>
+<fullyQualifiedTypeName name="com.wrycu.tutorial.Reference"/>
+<fullyQualifiedTypeName name="net.minecraft.block.material.Material"/>
+<fullyQualifiedTypeName name="com.wrycu.tutorial.blocks.BlockTest"/>
+<fullyQualifiedTypeName name="com.wrycu.tutorial.init.TutorialItems"/>
+<fullyQualifiedTypeName name="net.minecraft.item.Item"/>
+<fullyQualifiedTypeName name="com.wrycu.tutorial.blocks.RedstoneBlock"/>
+<fullyQualifiedTypeName name="net.minecraft.world.gen.feature.WorldGenMinable"/>
+<fullyQualifiedTypeName name="com.wrycu.tutorial.init.TutorialBlocks"/>
+<fullyQualifiedTypeName name="net.minecraft.init.Blocks"/>
+<fullyQualifiedTypeName name="com.wrycu.tutorial.OreGeneration"/>
+<fullyQualifiedTypeName name="net.minecraft.block.state.pattern.BlockHelper"/>
+<fullyQualifiedTypeName name="net.minecraft.block.Block"/>
+</qualifiedTypeNameHistroy>

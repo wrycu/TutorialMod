@@ -1,0 +1,109 @@
+package com.wrycu.tutorial;
+
+import java.util.Random;
+
+import net.minecraft.block.Block;
+import net.minecraft.block.state.IBlockState;
+import net.minecraft.block.state.pattern.BlockHelper;
+import net.minecraft.init.Blocks;
+import net.minecraft.util.BlockPos;
+import net.minecraft.world.World;
+import net.minecraft.world.gen.feature.WorldGenerator;
+
+public class StructureGeneration extends WorldGenerator {
+
+	@Override
+	public boolean generate(World worldIn, Random rand, BlockPos pos) {
+		// No one cares about checking if it's valid
+		int startX = pos.getX();
+		int startY = 65;
+		int startZ = pos.getZ();
+		int layers = 3;
+		
+
+		// THis is a horrible way of doing it until I find some automatic way to get it done
+		BlockPos newPos = new BlockPos(startX, startY, startZ);
+		int layer1[][] = {
+			{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+			{0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0},
+			{0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0},
+			{0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0},
+			{0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0},
+			{0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0},
+			{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
+		};
+		
+		int x_counter = 0;
+		int z_counter = 0;
+		/*
+		for (int i = 0; i < 18; i++)
+		{
+			layer1[i][0] = 0;
+		}
+		// second row
+		for (int i = 0; i < 7; i++)
+		{
+			layer1[z_counter + i][1] = 0;
+		}
+		z_counter = 7;
+		for (int i = 0; i < 4; i++)
+		{
+			layer1[z_counter + i][1] = 1;
+		}
+		z_counter = 11;
+		for (int i = 0; i < 7; i++)
+		{
+			layer1[z_counter + i][1] = 0;
+		}
+		*/
+		// Iterate over layer 1 and place blocks
+		for (int i = 0; i < 7; i++)
+		{
+			for (int k = 0; k < 18; k++)
+			{
+				if (layer1[i][k] == 1)
+				{
+					newPos = new BlockPos(startX + k, startY, startZ + i);
+					worldIn.setBlockState(newPos, Blocks.planks.getDefaultState());
+				}
+			}
+		}
+		// Layer 2
+				
+		// Layer 3
+				
+		// Layer 1 (the bottom)
+		/*
+		worldIn.setBlockState(newPos, Blocks.planks.getDefaultState());
+		for (int i = 0; i < 4; i++)
+		{
+			newPos = new BlockPos(startX, startY, startZ + i);
+			worldIn.setBlockState(newPos, Blocks.planks.getDefaultState());
+		}
+		
+		// This row is 3 to the left
+		startZ = pos.getZ() - 3;
+		for (int k = 1; k < 4; k++)
+		{
+			for (int i = 0; i < 10; i++)
+			{
+				newPos = new BlockPos(startX + k, startY, startZ + i);
+				worldIn.setBlockState(newPos, Blocks.planks.getDefaultState());
+			}
+		}
+		// Move up past what we've placed and undo the -3 we did earlier
+		startX = startX + 4;
+		startZ = pos.getZ();
+		for (int i = 0; i < 4; i++)
+		{
+			newPos = new BlockPos(startX, startY, startZ + i);
+			worldIn.setBlockState(newPos, Blocks.planks.getDefaultState());
+		}
+		*/
+		// Layer 2
+		
+		
+		return true;
+	}
+
+}

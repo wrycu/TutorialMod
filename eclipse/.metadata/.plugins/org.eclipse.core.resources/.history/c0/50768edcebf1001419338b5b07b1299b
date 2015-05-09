@@ -1,0 +1,11 @@
+/* Done server-side */
+package com.wrycu.tutorial.proxy;
+
+import com.wrycu.tutorial.init.TutorialItems;
+
+public class CommonProxy {
+	public void registerRenders()
+	{
+		TutorialItems.registerRenders();
+	}
+}
